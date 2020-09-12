@@ -1,8 +1,15 @@
 def has_negatives(a):
-    """
-    YOUR CODE HERE
-    """
-    # Your code here
+    # convert the array to a set
+    lookup_table = {}
+    for number in a:
+        lookup_table[number] = "a"
+
+    # loop through the set, check if the positive has a negative or not 
+    # If yes, append the positive to result
+    result = []
+    for number in lookup_table:
+        if number > 0 and -number in lookup_table:
+            result.append(number)
 
     return result
 
